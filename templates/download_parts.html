@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="row" >
+    <div class="col-lg-4 col-lg-offset-4">
+       <div class="panel panel-primary">
+           <div class="panel-body text-center">
+               <h3>
+                    Зaгрузка товаров из файла
+               </h3>
+                <p>
+                    Зaгрузите файл с информацией в новых товарах
+                </p>
+                <hr>
+               <form method="post" action="" enctype="multipart/form-data"> {% csrf_token %}
+                   <div class="form-group">
+                        <input type="file" name="file">
+                    </div>
+                    <button type="submit" class="btn btn-primary">Загрузить файл</button>
+                </form>
+            </div>
+</div>
+
+{% endblock %}
